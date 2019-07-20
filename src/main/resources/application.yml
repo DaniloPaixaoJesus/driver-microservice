@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: driver-service
+server:
+  port: 8082
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER:localhost}:${EUREKA_PORT:8761}/eureka/
