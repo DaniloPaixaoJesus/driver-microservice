@@ -18,16 +18,9 @@ public class DriverService {
 	
 	public DriverList init() {
 		// in case of duplicate key, ignore and go ahead
-		try {
-			insertDriver(new Driver("93418DF0R09QSDF", "Kalles Grustransporter", "AB", "Cementvägen 8, 111 11 Södertälje"));
-		}catch (Exception e) {}
-		try {
-			insertDriver(new Driver("623480520FDF2", "Johans Bulk", "AB", "Balkvägen 12, 222 22 Stockholm"));
-		}catch (Exception e) {}
-		try {
-			insertDriver(new Driver("93418DF0R09QSDF", "Kalles Grustransporter", "AB", "Cementvägen 8, 111 11 Södertälje"));
-		}catch (Exception e) {}
-		
+		try {insertDriver(new Driver("93418DF0R09QSDF", "Kalles Grustransporter", "AB", "Cementvägen 8, 111 11 Södertälje"));}catch (Exception e) {}
+		try {insertDriver(new Driver("623480520FDF2", "Johans Bulk", "AB", "Balkvägen 12, 222 22 Stockholm"));}catch (Exception e) {}
+		try {insertDriver(new Driver("7428DFEC8137652", "Haralds Värdetransporter", "AB", "Budgetvägen 1, 333 33 Uppsala"));}catch (Exception e) {}
 		return this.getAllDriver();
 	}
 	
