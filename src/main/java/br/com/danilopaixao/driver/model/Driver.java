@@ -2,14 +2,19 @@ package br.com.danilopaixao.driver.model;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "driver")
 public class Driver implements Serializable{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -7943900894009719758L;
-	
+	@Id
 	private String id;
+	//@Indexed(unique = true)
 	private String name;
 	private String licenseCategory;
 	private String address;

@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -29,10 +27,10 @@ public class DriverResource {
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	@PostMapping(value = "", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@RequestMapping(value = "/init", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	@ResponseStatus(HttpStatus.OK)
-	public Driver insertDriver(@RequestBody(required = true) final Driver driver) {
-		return new Driver("93418DF0R09QSDF", "Kalles Grustransporter", "AB", "Cementvägen 8, 111 11 Södertälje");
+	public DriverList insertDriver() {
+		return service.init();
 	}
 	
 	

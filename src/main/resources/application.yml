@@ -1,6 +1,11 @@
 spring:
   application:
     name: driver-service
+  data:
+    mongodb:
+      host: ${MONGO_HOST:localhost}
+      port: ${MONGO_PORT:27017}
+      database: ${MONGO_DATABASE:driverdb}
 server:
   port: 8082
 eureka:

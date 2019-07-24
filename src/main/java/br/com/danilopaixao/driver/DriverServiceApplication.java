@@ -22,8 +22,5 @@ public class DriverServiceApplication {
 	@LoadBalanced
 	public RestTemplate getRestTemplate() {
 		return new RestTemplate();
-//		HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory();
-//		clientHttpRequestFactory.setConnectTimeout(2000);
-//		return new RestTemplate(clientHttpRequestFactory);
 	}
 }
