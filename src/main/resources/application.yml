@@ -3,12 +3,12 @@ spring:
     name: driver-service
   data:
     mongodb:
-      host: ${MONGO_HOST:localhost}
-      port: ${MONGO_PORT:27017}
-      database: ${MONGO_DATABASE:driverdb}
+      uri: mongodb://admin:senha123@ds141208.mlab.com:41208/springclouddb
+      database: springclouddb
 server:
-  port: 8082
+  port: 8080
 eureka:
   client:
+    enabled: false
     serviceUrl:
       defaultZone: http://${EUREKA_SERVER:localhost}:${EUREKA_PORT:8761}/eureka/
