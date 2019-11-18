@@ -31,6 +31,11 @@ public class DriverService {
 		return driverRepository.insert(driver);
 	}
 	
+	public Driver save(Driver driver) {
+		logger.info("##DriverService#save: {}", driver);
+		return driverRepository.save(driver);
+	}
+	
 	public DriverList getAllDriver() {
 		logger.info("##DriverService#getAllDriver: nor arguments");
 		return new DriverList(driverRepository.findAll());
