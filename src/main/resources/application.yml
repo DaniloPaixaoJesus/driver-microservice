@@ -3,8 +3,8 @@ spring:
     name: driver-service
   data:
     mongodb:
-      uri: mongodb://localhost:27017/springclouddb
-      database: springclouddb
+      uri: ${MONGODB_URI:mongodb://admin:senha123@ds141208.mlab.com:41208/springclouddb}
+      database: ${MONGODB_DATABASE:springclouddb}
 server:
   port: 8080
 eureka:
