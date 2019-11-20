@@ -2,50 +2,39 @@ package br.com.danilopaixao.driver.test.builder;
 
 import org.apache.commons.lang.RandomStringUtils;
 
-//import br.com.danilopaixao.vehicle.enums.StatusEnum;
-//import br.com.danilopaixao.vehicle.model.Vehicle;
+import br.com.danilopaixao.driver.model.Driver;
 
 public class DriverTestBuilder {
-	/*
-	private String vin;
-	private String regNumber;
+	private String id;
 	private String name;
-	private String driverId;
-	private StatusEnum status;
+	private String licenseCategory;
+	private String address;
 	
-	public Vehicle buildRandom(StatusEnum status) {
-		return new Vehicle(RandomStringUtils.random(25, true, true), 
-						   RandomStringUtils.random(15, true, true),
-						   RandomStringUtils.random(10, true, false), 
-						   status,
-						   RandomStringUtils.random(15, true, true));
+	public Driver build() {
+		return new Driver(id, name, licenseCategory, address);
 	}
 	
-	public Vehicle build() {
-		return new Vehicle(vin, regNumber, name, status, driverId);
+	public Driver buildRandom() {
+		return new Driver(	"ID " + RandomStringUtils.random(10, true, true), 
+				"NAME " + RandomStringUtils.random(10, true, true), 
+				"LICENSE CATEGORY " + RandomStringUtils.random(10, true, true), 
+				"ADDRESS " + RandomStringUtils.random(10, true, true));
 	}
 	
-	public VehicleTestBuilder setVin(String vin) {
-		this.vin = vin;
+	public DriverTestBuilder setId(String id) {
+		this.id = id;
 		return this;
 	}
-	public VehicleTestBuilder setRegNumber(String regNumber) {
-		this.regNumber = regNumber;
-		return this;
-	}
-	public VehicleTestBuilder setName(String name) {
+	public DriverTestBuilder setName(String name) {
 		this.name = name;
 		return this;
 	}
-	public VehicleTestBuilder setDriverId(String driverId) {
-		this.driverId = driverId;
+	public DriverTestBuilder setLicenseCategory(String licenseCategory) {
+		this.licenseCategory = licenseCategory;
 		return this;
 	}
-	public VehicleTestBuilder setStatus(StatusEnum status) {
-		this.status = status;
+	public DriverTestBuilder setAddress(String address) {
+		this.address = address;
 		return this;
 	}
-	*/
-	
-
 }
