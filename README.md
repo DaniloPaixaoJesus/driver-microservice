@@ -9,11 +9,6 @@ API Gateway and Filter: Zuul API Gateway.
 Spring Cloud Config
 Springboot as a base of Spring Cloud framework and Business Microservices.
 
-### Rabbit MQ
-Messaging broker to provide publish / subscribe, asynchronous processing and queues.
-Each "ping" request publish a message into MQ.
-The communication between microservices is through MQ and Rest API.
-
 ### MongoDB
 Document database to store all information about vehicles.
 
