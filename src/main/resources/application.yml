@@ -1,14 +1,14 @@
 spring:
   application:
-    name: driver-service
+    name: driver
   data:
     mongodb:
-      uri: ${MONGODB_URI:mongodb://admin:senha123@ds141208.mlab.com:41208/springclouddb}
-      database: ${MONGODB_DATABASE:springclouddb}
+      uri: ${MONGODB_URI:mongodb://root:password@localhost:27017}
+      database: ${MONGODB_DATABASE:driver-service-db}
 server:
   port: 8080
-eureka:
-  client:
-    enabled: ${ENABLED_EUREKA:false}
-    serviceUrl:
-      defaultZone: http://${EUREKA_SERVER:localhost}:${EUREKA_PORT:8761}/eureka/
+#eureka:
+#  client:
+#    enabled: ${ENABLED_EUREKA:false}
+#    serviceUrl:
+#      defaultZone: http://${EUREKA_SERVER:localhost}:${EUREKA_PORT:8761}/eureka/
